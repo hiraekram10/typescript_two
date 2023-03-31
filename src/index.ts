@@ -108,9 +108,9 @@ console.log(person1,person2)
 
 //practicing
 class Employee {
-   private Pname:string;
+  private Pname:string;
     ProllNo:number;
-    constructor(name:string, rollNo:number){
+    constructor(private name:string, rollNo:number){
         this.Pname = name;
         this.ProllNo= rollNo
     }

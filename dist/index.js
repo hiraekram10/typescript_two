@@ -75,6 +75,7 @@ console.log(person1, person2);
 //practicing
 class Employee {
     constructor(name, rollNo) {
+        this.name = name;
         this.Pname = name;
         this.ProllNo = rollNo;
     }
