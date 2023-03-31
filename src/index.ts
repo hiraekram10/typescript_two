@@ -77,4 +77,15 @@ let add = function (val1:number,val2:number,calc:"add" | "substract" ){
 // or const Calc = "add" | "substract" using this as calc: Calc this is literaal operator
 console.log(add(5,10,"add"))
 
+//Tuples FOR FIXED length ARRAY
+// let gender : [string,string] = ["Male","Female",""] error legth wrong
+let gender : [string,string] = ["Male","Female"]
+gender.push("hello") // this working its wrong
+console.log(gender);
+
+
+let admin:[number,boolean] = [1,true]
+//code status
+let error:[number,string] =[404,"redirect"]
+
 
