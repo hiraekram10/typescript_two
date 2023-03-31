@@ -72,16 +72,27 @@ class Person {
 const person1 = new Person("rida", 56);
 const person2 = new Person("shama", 66);
 console.log(person1, person2);
-//practicing
+//Access mofifiers  by default properties are public
 class Employee {
-    constructor(name, rollNo) {
-        this.name = name;
-        this.Pname = name;
-        this.ProllNo = rollNo;
+    constructor(n, r) {
+        this.name = n;
+        this.rollNo = r;
     }
 }
-const emp1 = new Person("raza", 1000);
-console.log(emp1.Pname);
-const emp2 = new Person("yasir", 5000);
+const emp1 = new Employee("raza", 1000);
+console.log(emp1.rollNo);
+// console.log(emp1.name)  // compiling error because name is error
+const emp2 = new Employee("yasir", 5000);
 console.log(emp1, emp2);
+//shorthand for class 
+class Children {
+    constructor(n, r) {
+        this.n = n;
+        this.r = r;
+    }
+}
+const child1 = new Children("MAHA", 78);
+// child1.n  //error not accesible
+child1.r = 73;
+console.log(child1);
 //# sourceMappingURL=index.js.map

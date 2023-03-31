@@ -20,9 +20,9 @@ let user: User = {
     name: "hira",
     rollNo: 604,
     hobbies: ["listening"],
-    
+
 }
-user.email = "amaze@gmail.com" 
+user.email = "amaze@gmail.com"
 
 
 
@@ -33,7 +33,7 @@ users.push({
     name: "ekram",
     rollNo: 605,
     hobbies: ["reading"],
-    email:"dad@gmail.com" //store later
+    email: "dad@gmail.com" //store later
 })
 
 console.log(users, user)
@@ -48,7 +48,7 @@ const user2: User = {
 
 
 //next step function
-                                        //void: not return anything
+//void: not return anything
 //for callback in params                       //cb:Function
 // const add = function(val1:number ,val2:number ,cb:(x:string)=>void):number {
 //    cb("hello")
@@ -65,28 +65,28 @@ const user2: User = {
 
 //type literals
 // const Calc = "add" | "substract |"+" | "-"
-let add = function (val1:number,val2:number,calc:"add" | "substract" ){
-   if (calc === "add" ){
-    return val1 + val2
-   }else if (calc === "substract"){
-    return val1 - val2
-   }
-} ;
+let add = function (val1: number, val2: number, calc: "add" | "substract") {
+    if (calc === "add") {
+        return val1 + val2
+    } else if (calc === "substract") {
+        return val1 - val2
+    }
+};
 //console.log(add(5,10,"divide")) //accepted bcz string calc: string
 //for actual value :"add" | "substract" using unon operator
 // or const Calc = "add" | "substract" using this as calc: Calc this is literaal operator
-console.log(add(5,10,"add"))
+console.log(add(5, 10, "add"))
 
 //Tuples FOR FIXED length ARRAY
 // let gender : [string,string] = ["Male","Female",""] error legth wrong
-let gender : [string,string] = ["Male","Female"]
+let gender: [string, string] = ["Male", "Female"]
 gender.push("hello") // this working its wrong
 console.log(gender);
 
 
-let admin:[number,boolean] = [1,true]
+let admin: [number, boolean] = [1, true]
 //code status
-let error:[number,string] =[404,"redirect"]
+let error: [number, string] = [404, "redirect"]
 
 
 //class in ts
@@ -95,30 +95,41 @@ let error:[number,string] =[404,"redirect"]
 //The constructor is a special type of method which is called when creating an object. In TypeScript,
 // the constructor method is always defined with the name "constructor
 class Person {
-    Pname:string;
-    ProllNo:number;
-    constructor(name:string, rollNo:number){
+    Pname: string;
+    ProllNo: number;
+    constructor(name: string, rollNo: number) {
         this.Pname = name;
-        this.ProllNo= rollNo
+        this.ProllNo = rollNo
     }
 }
-const person1 = new Person("rida",56)
-const person2 = new Person("shama",66)
-console.log(person1,person2)
+const person1 = new Person("rida", 56)
+const person2 = new Person("shama", 66)
+console.log(person1, person2)
 
-//practicing
+//Access mofifiers  by default properties are public
 class Employee {
-  private Pname:string;
-    ProllNo:number;
-    constructor(private name:string, rollNo:number){
-        this.Pname = name;
-        this.ProllNo= rollNo
+    private name: string;
+    rollNo: number;
+    constructor(n: string, r: number) {
+        this.name = n;
+        this.rollNo = r
     }
 }
-const emp1 = new Person("raza",1000)
-console.log(emp1.Pname)
-const emp2 = new Person("yasir",5000)
-console.log(emp1,emp2)
+const emp1 = new Employee("raza", 1000)
+console.log(emp1.rollNo)
+// console.log(emp1.name)  // compiling error because name is error
+const emp2 = new Employee("yasir", 5000)
+console.log(emp1, emp2)
 
+//shorthand for class 
+
+class Children { 
+constructor(private n: string, public r: number){
+  }
+         }
+ const child1 = new Children ("MAHA",78)
+// child1.n  //error not accesible
+child1.r = 73
+console.log(child1)
 
 
