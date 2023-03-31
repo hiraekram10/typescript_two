@@ -123,13 +123,52 @@ console.log(emp1, emp2)
 
 //shorthand for class 
 
+// class Children { 
+// constructor(private n: string, public r: number){
+//   }
+//          }
+//  const child1 = new Children ("MAHA",78)
+// // child1.n  //error not accesible
+// child1.r = 73
+// console.log(child1)
+
+//adding new property
+
 class Children { 
+  private  hobbies:string[]=[] // accessible probelm making it private
 constructor(private n: string, public r: number){
   }
+  //solve matter
+
+  addHobbies(hobby:string){
+    this.hobbies.push(hobby)
+  }
          }
- const child1 = new Children ("MAHA",78)
-// child1.n  //error not accesible
-child1.r = 73
-console.log(child1)
+//working fine but
+// const child1 = new Children('rida',785)
+// child1.hobbies.push("singing") //done 
+// console.log(child1)
+
+
+//probelm is
+// const child1 = new Children('rida',785)
+// child1.hobbies.push("singing") //done 
+// // child1.hobbies.length = 0
+// child1.hobbies = []
+// console.log(child1)
+
+//now probelm is
+//  const child1 = new Children('rida',785)
+//  child1.hobbies.push("singing") //error
+//  child1.hobbies.length = 0
+
+//poblem solve without getter setter
+ const child1 = new Children('rida',785)
+ child1.addHobbies("singing")
+
+
+ //reaonly
+
+ 
 
 
