@@ -60,4 +60,27 @@ console.log(gender);
 let admin = [1, true];
 //code status
 let error = [404, "redirect"];
+//class in ts
+//The constructor is a special type of method which is called when creating an object. In TypeScript,
+// the constructor method is always defined with the name "constructor
+class Person {
+    constructor(name, rollNo) {
+        this.Pname = name;
+        this.ProllNo = rollNo;
+    }
+}
+const person1 = new Person("rida", 56);
+const person2 = new Person("shama", 66);
+console.log(person1, person2);
+//practicing
+class Employee {
+    constructor(name, rollNo) {
+        this.Pname = name;
+        this.ProllNo = rollNo;
+    }
+}
+const emp1 = new Person("raza", 1000);
+console.log(emp1.Pname);
+const emp2 = new Person("yasir", 5000);
+console.log(emp1, emp2);
 //# sourceMappingURL=index.js.map
